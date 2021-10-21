@@ -36,7 +36,6 @@ query {
       }
     }
   }
-  
   `
 
 export default BlogPage

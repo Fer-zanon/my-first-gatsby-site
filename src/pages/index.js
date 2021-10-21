@@ -1,8 +1,9 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage  } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 
-const IndexPage = () => 
+const IndexPage = ({ data }) => 
 {
   return(
     <Layout pageTitle="Home Page">
@@ -14,5 +15,14 @@ const IndexPage = () =>
     </Layout>
   )
 }
+export const query = graphql`
+query{
+  strapiImages {
+    pics {
+      url
+    }
+  }
+}
+`
 
 export default IndexPage;

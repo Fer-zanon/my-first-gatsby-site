@@ -15,5 +15,20 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: "http://localhost:1337",
+        collectionTypes: [
+          "messages",
+          "images",
+          "pictures",
+          "previews",
+          "notes"
+        ],
+        queryLimit: 1000,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };

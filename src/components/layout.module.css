@@ -23,3 +23,15 @@
     font-weight: 700;
     margin: 3rem 0;
   }
+
+  .row {
+    display: inline-block;
+    flex-direction: row;
+  }
+  .block {
+    width: 200px;
+  }
+
+  .horizontalBlocks {
+    display: inline-block;
+  }
